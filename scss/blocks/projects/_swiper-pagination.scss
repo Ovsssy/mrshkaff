@@ -1,0 +1,17 @@
+.swiper-pagination-fraction{
+  & span{
+    font-size: 22rem;
+
+    @media (min-width: $tablet-above) and (max-width: $desktop) {
+      font-size: 20rem;
+    }
+
+    @media (min-width: $mobile-above) and (max-width: $tablet) {
+      font-size: 16rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 14rem;
+    }
+  }
+}

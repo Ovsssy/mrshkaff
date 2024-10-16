@@ -1,0 +1,10 @@
+.swiper-scrollbar{
+  margin: 0 !important;
+  background-color: $gray-color;
+  opacity: 1;
+
+  &-drag{
+    border-radius: 2rem;
+    background-color: $red-color;
+  }
+}

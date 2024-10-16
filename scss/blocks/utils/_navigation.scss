@@ -1,0 +1,17 @@
+.navigation {
+  width: 647rem;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+
+    &__link {
+      font-size: 18rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $red-color
+      }
+    }
+  }
+}

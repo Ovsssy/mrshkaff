@@ -1,0 +1,40 @@
+$desktop-above: 1201px;
+$desktop: 1200px;
+
+$tablet-album: 1366px;
+$tablet-album-above: 1367px;
+
+$tablet-alt: 1024px;
+$tablet-alt-above: 1025px;
+
+$tablet-above: 769px;
+$tablet: 768px;
+
+$mobile-above: 481px;
+$mobile: 480px;
+
+
+@media (min-width: 1200px) {
+  html {
+    font-size: unquote($string: "calc(100vw/1920)");
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  html {
+    font-size: unquote($string: "calc(100vw/1200)");
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: unquote($string: "calc(100vw/768)");
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: unquote($string: "calc(100vw/375)");
+  }
+}

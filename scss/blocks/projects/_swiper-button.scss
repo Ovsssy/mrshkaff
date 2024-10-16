@@ -1,0 +1,14 @@
+.swiper-button{
+  &-prev, &-next{
+    top: unset;
+    left: unset;
+    right: unset;
+    width: 24rem;
+    height: 24rem;
+    margin-top: 0;
+
+    &:after{
+      all: unset;
+    }
+  }
+}

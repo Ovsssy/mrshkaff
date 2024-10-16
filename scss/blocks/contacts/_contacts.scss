@@ -1,0 +1,151 @@
+.contacts {
+  background-color: $background-color;
+  overflow: hidden;
+
+  &-container {
+    display: flex;
+    gap: 20rem;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    width: 560rem;
+  }
+
+  &__title {
+    margin-bottom: 10rem;
+  }
+
+  &__description {
+    margin-bottom: 40rem;
+    width: 435rem;
+  }
+
+  &-form {
+    width: 435rem;
+  }
+
+  &-info {
+    position: relative;
+    width: 1073rem;
+
+    &__image {
+      width: 100%;
+      height: 455rem;
+
+      & iframe{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__block {
+      position: absolute;
+      top: 50%;
+      left: auto;
+      right: 80rem;
+      display: flex;
+      flex-direction: column;
+      gap: 25rem;
+      width: 310rem;
+      padding: 30rem;
+      border-radius: 10rem;
+      background-color: #1d1d1b;
+      transform: translateY(-50%);
+
+      &-title{
+        font-size: 14rem;
+        line-height: 125%;
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+      }
+    }
+  }
+
+  @media (max-width: $desktop) {
+    &-container {
+      flex-direction: column;
+      gap: 40rem;
+    }
+
+    &-content {
+      width: 85%;
+    }
+
+    &__description{
+      width: auto;
+    }
+
+    &-info {
+      width: auto;
+
+      &__image {
+        width: 85%;
+        height: 400rem;
+      }
+
+      &__block {
+        right: 150rem;
+      }
+    }
+
+    &-form {
+      width: 80%;
+      align-self: center;
+    }
+  }
+
+  @media (max-width: $tablet) {
+
+    &-content {
+      width: 100%;
+    }
+
+    &-info {
+      &__image {
+        width: 100%;
+        height: 350rem;
+      }
+
+      &__block {
+        right: 20rem;
+        gap: 20rem;
+        width: 275rem;
+        padding: 25rem;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+
+    &__description {
+      margin-bottom: 25rem;
+    }
+
+    &-form {
+      width: 100%;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column-reverse;
+
+      &__image {
+        height: 250rem;
+      }
+
+      &__block {
+        position: unset;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20rem;
+        transform: unset;
+      }
+    }
+  }
+}

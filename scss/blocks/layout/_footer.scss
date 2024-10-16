@@ -1,0 +1,114 @@
+.footer {
+  flex: 0 0 auto;
+  background-color: $background-color;
+
+  &-nav-logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60rem;
+  }
+
+  &-logotype {
+    width: 266rem;
+    height: 83rem;
+    @include img-size;
+  }
+
+  &-navigation{
+    &__list{
+      gap: 30rem;
+    }
+  }
+
+  &-links {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20rem;
+      border-top: 1rem solid $gray-color;
+    }
+
+    &__privacy{
+      font-size: 16rem;
+    }
+
+    &__list {
+      display: flex;
+      gap: 30rem;
+    }
+
+    &__item {
+      width: 62rem;
+      height: 61rem;
+      @include svg-size;
+
+      & svg {
+        transition: transform 0.5s ease;
+      }
+
+      &:hover {
+        & svg {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__privacy {
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $red-color;
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &-navigation {
+      width: auto !important;
+
+      &__list {
+        flex-wrap: wrap;
+        gap: 20rem;
+        width: 320rem;
+      }
+    }
+
+    &-logotype {
+      width: 240rem;
+      height: 50rem;
+      align-self: center;
+    }
+
+    &-links {
+      &__item {
+        width: 40rem;
+        height: 40rem;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &-nav-logo-wrapper{
+      margin-bottom: 20rem;
+    }
+
+    &-navigation{
+      &__list{
+        flex-direction: column;
+        width: auto;
+        gap: 10rem;
+      }
+    }
+
+    &-logotype{
+      width: 180rem;
+      align-self: flex-start;
+    }
+
+    &-links-wrapper{
+      flex-direction: column-reverse;
+      gap: 15rem;
+    }
+  }
+}

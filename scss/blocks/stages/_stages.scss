@@ -1,0 +1,63 @@
+.stages {
+  background: linear-gradient(180deg, rgba(29, 29, 27, 0.00) -48.71%, #1D1D1B 100%), linear-gradient(0deg, rgba(29, 29, 27, 0.00) -37.04%, #1D1D1B 100%), url('../img/stages-back.webp');
+  background-size: cover;
+
+  &-container {
+    display: flex;
+    gap: 20rem;
+  }
+
+  &__title {
+    width: 558rem;
+    flex-shrink: 0;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 20rem;
+      padding: 40rem 20rem;
+      border-bottom: 1rem solid $gray-color;
+
+      &-number-title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+      }
+
+      &-number {
+        font-size: 16rem;
+        font-weight: 600;
+        line-height: 120%;
+        color: $red-color;
+      }
+
+      &-description {
+        color: #848282;
+      }
+    }
+  }
+
+  @media (max-width: $desktop) {
+    &-container {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: $mobile) {
+
+    &__title {
+      width: 100%;
+    }
+
+    &-list{
+      &__item{
+        padding: 30rem 20rem;
+      }
+    }
+  }
+}

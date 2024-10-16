@@ -1,0 +1,147 @@
+.preview {
+  padding-bottom: 60rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(2deg, rgba(29, 29, 27, 0.00) -53.97%, #1D1D1B 98.46%), linear-gradient(180deg, rgba(29, 29, 27, 0.00) -56.27%, #1D1D1B 100%), url('../img/background-preview.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 144rem;
+  }
+
+  &-our-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40rem;
+  }
+
+  &__about {
+    display: flex;
+    gap: 10rem;
+    width: 352rem;
+
+    &-icon {
+      width: 34rem;
+      height: 34rem;
+      flex-shrink: 0;
+      @include svg-size;
+    }
+
+    &-text {
+      font-size: 16rem;
+      color: $gray-color;
+
+      &--end {
+        text-align: end;
+      }
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__title-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 776rem;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20rem;
+    font-size: 65rem;
+    line-height: 120%;
+  }
+
+  &__description {
+    margin-bottom: 30rem;
+  }
+
+  &__button {
+    width: 326rem;
+    font-size: 22rem;
+    font-weight: 450;
+    line-height: 140%;
+  }
+
+  @media (min-width: $tablet-above) and (max-width: $desktop) {
+
+    &-our-wrapper {
+      gap: 10rem;
+    }
+
+    &__title {
+      font-size: 50rem;
+    }
+  }
+
+  @media (min-width: $mobile-above) and (max-width: $tablet) {
+    padding-bottom: 40rem;
+
+    &__title {
+      font-size: 32rem;
+    }
+
+    &__about {
+      width: auto;
+      flex-direction: column;
+
+      &--reverse {
+        align-items: end;
+      }
+
+      &-text {
+        font-size: 14rem;
+      }
+
+      &-icon {
+        width: 20rem;
+        height: 20rem;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+
+    padding-bottom: 20rem;
+
+    &-container {
+      padding-top: 100rem;
+    }
+
+    &__title {
+      font-size: 28rem;
+    }
+
+    &-our-wrapper {
+      flex-direction: column;
+      gap: 20rem;
+    }
+
+    &__title-description {
+      width: 100%;
+    }
+
+    &__about {
+      &-text {
+        &--end {
+          text-align: start;
+        }
+      }
+
+      &--reverse {
+        flex-direction: row;
+      }
+    }
+  }
+}

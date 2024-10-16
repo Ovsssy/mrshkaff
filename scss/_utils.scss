@@ -1,0 +1,139 @@
+.container {
+  padding: 0rem 100rem;
+
+  &--inner {
+    padding-top: 80rem;
+    padding-bottom: 80rem;
+  }
+
+  &-section {
+    display: grid;
+    grid-template-columns: 125rem 1fr;
+    gap: 20rem;
+  }
+
+  @media (min-width: $tablet-above) and (max-width: $desktop) {
+    padding: 0rem 75rem;
+
+    &--inner {
+      padding-top: 60rem;
+      padding-bottom: 60rem;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &-section {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: $mobile-above) and (max-width: $tablet) {
+    padding: 0 40rem;
+
+    &--inner {
+      padding-top: 40rem;
+      padding-bottom: 40rem;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 20rem;
+
+    &--inner {
+      padding-top: 20rem;
+      padding-bottom: 20rem;
+    }
+  }
+}
+
+.title {
+  font-family: "Brygada1918";
+  text-transform: uppercase;
+  font-size: 40rem;
+  font-weight: 400;
+  line-height: 140%;
+
+  &-red {
+    font-family: "Brygada1918";
+    color: $red-color;
+  }
+
+  @media (min-width: $tablet-above) and (max-width: $desktop) {
+    font-size: 36rem;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 32rem;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 24rem;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+  height: 63rem;
+  border: none;
+  border-radius: 10rem;
+  background-color: $red-color;
+  box-shadow: 0rem 4rem 10rem 0rem rgba(166, 82, 82, 0.25);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    border: 2rem solid #BD1A00;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  &:active {
+    border: 2rem solid #A01803;
+    background-color: #A01803;
+  }
+
+  &:disabled {
+    border: none;
+    color: #B8B8B8;
+    background-color: #767676;
+  }
+
+  @media (max-width: $mobile) {
+    height: 50rem;
+  }
+}
+
+.section-title {
+  &__name {
+    display: flex;
+    width: 100%;
+    margin-top: 11rem;
+    font-size: 16rem;
+  }
+}
+
+.logotype {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.error-text{
+  margin-bottom: 5rem;
+  font-size: 12rem;
+  color: $red-color;
+}
+
+#about, #stages, #services, #order, #projects, #contacts{
+  scroll-margin-top: 100rem;
+  @media (max-width: $mobile) {
+    scroll-margin-top: 50rem;
+  }
+}

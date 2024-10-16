@@ -1,0 +1,43 @@
+.top-bar {
+  background: #0F0F0F;
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    gap: 40rem;
+    width: 100%;
+    padding: 16rem 0;
+  }
+
+  &__address{
+    font-size: 14rem;
+  }
+
+  &__schedule {
+    display: flex;
+    gap: 16rem;
+
+    & span{
+      font-size: 14rem;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &-container{
+      flex-direction: column;
+      gap: 5rem;
+      align-items: center;
+      padding: 10rem;
+    }
+
+    &__address{
+      font-size: 12rem;
+    }
+
+    &__schedule{
+      & span{
+        font-size: 12rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  &__input {
+    margin-bottom: 15rem;
+    padding: 15rem 20rem;
+    height: 60rem;
+    border-radius: 10rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1rem solid $main-color-text;
+
+    font-size: 16rem;
+    line-height: 120%;
+
+    &::placeholder {
+      color: $gray-color;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &--last {
+      margin-bottom: 25rem;
+
+      @media (max-width: $mobile) {
+        margin-bottom: 20rem;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      height: 50rem;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+
+    & span {
+      margin-bottom: 10rem;
+      font-size: 16rem;
+    }
+
+    &--none{
+      display: none;
+    }
+  }
+}

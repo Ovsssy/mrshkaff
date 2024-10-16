@@ -1,0 +1,66 @@
+.slider {
+  display: flex;
+  width: 100%;
+  height: 456rem;
+  padding-bottom: 20rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-list {
+    position: relative;
+    display: flex;
+    gap: 20rem;
+    padding-left: 20rem;
+    height: 100%;
+    animation: slider-list 20s linear infinite;
+
+    &__item {
+      width: 270rem;
+      height: 371rem;
+      flex-shrink: 0;
+      @include img-size;
+
+      & img {
+        user-select: none;
+      }
+ 
+      &:nth-child(2n+1) {
+        align-self: end;
+      }
+
+      &:nth-child(2n) {
+        align-self: start;
+      }
+    }
+
+    &-two{
+      animation-delay: 5s;
+    }
+  }
+
+  @keyframes slider-list {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width: $tablet) {
+    height: 350rem;
+
+    &-list {
+      &__item {
+        width: 200rem;
+        height: 270rem;
+      }
+    }
+  }
+}

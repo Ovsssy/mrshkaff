@@ -1,0 +1,29 @@
+@import 'media', 'normalize', 'globals', 'utils', 'fonts';
+
+@import 'blocks/top-bar/top-bar';
+
+@import 'blocks/layout/header';
+
+@import 'blocks/preview/preview', 'blocks/preview/slider';
+
+@import 'blocks/advantages/advantages';
+
+@import 'blocks/order/order';
+
+@import 'blocks/services/services';
+
+@import 'blocks/stages/stages';
+
+@import 'blocks/about/about';
+
+@import 'blocks/projects/projects','blocks/projects/swiper-pagination', 'blocks/projects/swiper-scrollbar', 'blocks/projects/swiper-button';
+
+@import 'blocks/contacts/contacts';
+
+@import 'blocks/layout/footer';
+
+@import 'blocks/utils/navigation', 'blocks/utils/burger-menu', 'blocks/utils/popup', 'blocks/utils/form';
+
+@import 'blocks/error-404/error-404';
+
+@import 'blocks/order/quiz'
